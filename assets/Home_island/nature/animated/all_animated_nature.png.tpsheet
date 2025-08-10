@@ -1,0 +1,138 @@
+{
+	"textures": [
+		{
+			"image": "all_animated_nature.png.png",
+			"size": {
+				"w": 125,
+				"h": 324
+			},
+			"sprites": [
+				{
+					"filename": "water lily 1.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 44
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 1,
+						"h": 4
+					}
+				},
+				{
+					"filename": "water lily 2.png",
+					"region": {
+						"x": 0,
+						"y": 44,
+						"w": 64,
+						"h": 44
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "water plant 2.png",
+					"region": {
+						"x": 64,
+						"y": 44,
+						"w": 61,
+						"h": 45
+					},
+					"margin": {
+						"x": 2,
+						"y": 2,
+						"w": 3,
+						"h": 3
+					}
+				},
+				{
+					"filename": "water plant 1.png",
+					"region": {
+						"x": 0,
+						"y": 89,
+						"w": 60,
+						"h": 47
+					},
+					"margin": {
+						"x": 2,
+						"y": 0,
+						"w": 4,
+						"h": 1
+					}
+				},
+				{
+					"filename": "small stone 1.png",
+					"region": {
+						"x": 60,
+						"y": 89,
+						"w": 56,
+						"h": 55
+					},
+					"margin": {
+						"x": 4,
+						"y": 5,
+						"w": 8,
+						"h": 9
+					}
+				},
+				{
+					"filename": "small stone 2.png",
+					"region": {
+						"x": 0,
+						"y": 144,
+						"w": 58,
+						"h": 56
+					},
+					"margin": {
+						"x": 3,
+						"y": 4,
+						"w": 6,
+						"h": 8
+					}
+				},
+				{
+					"filename": "stone 1.png",
+					"region": {
+						"x": 58,
+						"y": 144,
+						"w": 64,
+						"h": 61
+					},
+					"margin": {
+						"x": 0,
+						"y": 2,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "rock 1.png",
+					"region": {
+						"x": 0,
+						"y": 205,
+						"w": 125,
+						"h": 119
+					},
+					"margin": {
+						"x": 2,
+						"y": 6,
+						"w": 3,
+						"h": 9
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:0c98215c495dbdb7d46e4e7e736009bb:81b82c45ab21997c524e99e20e927b23:be294c8ddaa741edc38a1ff37a27bf1c$"
+	}
+}
