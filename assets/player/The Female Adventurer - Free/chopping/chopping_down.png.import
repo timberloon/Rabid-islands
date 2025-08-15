@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2872a4ofp04e"
-path="res://.godot/imported/nature_sprite_sheet.png-503bc664d41d5bc9b7900f6d0f052f23.ctex"
+uid="uid://csnv48e0foh8k"
+path="res://.godot/imported/chopping_down.png-2fd33a3b8b1f992ed9c67d13f254524b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Home_island/nature/nature_sprite_sheet.png"
-dest_files=["res://.godot/imported/nature_sprite_sheet.png-503bc664d41d5bc9b7900f6d0f052f23.ctex"]
+source_file="res://assets/player/The Female Adventurer - Free/chopping/chopping_down.png"
+dest_files=["res://.godot/imported/chopping_down.png-2fd33a3b8b1f992ed9c67d13f254524b.ctex"]
 
 [params]
 

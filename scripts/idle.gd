@@ -24,6 +24,8 @@ func _on_next_transitions() -> void:
 	input_event.movement_input()
 	if input_event.is_movement_input():
 		transition.emit("walk")
+	if Input.is_action_just_pressed("action"):
+		transition.emit("chopping")
 
 
 func _on_enter() -> void:

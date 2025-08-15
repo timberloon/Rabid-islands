@@ -4,7 +4,7 @@ extends Node
 @warning_ignore("unused_signal")
 signal transition 
 
-var speed = Vector2(55,40)
+var speed = Vector2(70,50)
 var accel = 10
 var decel = 5
 var direction:Vector2

@@ -1,12 +1,22 @@
-[gd_scene load_steps=106 format=3 uid="uid://cmpcw0k3ekq1g"]
+[gd_scene load_steps=110 format=3 uid="uid://cmpcw0k3ekq1g"]
 
 [ext_resource type="Script" uid="uid://cb7rpay8oyupb" path="res://scripts/player.gd" id="1_6eyoc"]
 [ext_resource type="Texture2D" uid="uid://7gjngl3jh5mv" path="res://assets/player/The Female Adventurer - Free/Death/death.png" id="1_76oj4"]
 [ext_resource type="Texture2D" uid="uid://iv4okxia7nuj" path="res://assets/player/The Female Adventurer - Free/Idle/Idle.png" id="2_dyp2m"]
+[ext_resource type="Texture2D" uid="uid://csnv48e0foh8k" path="res://assets/player/The Female Adventurer - Free/chopping/chopping_down.png" id="2_eojnx"]
 [ext_resource type="Texture2D" uid="uid://bcjsftc0vfgyg" path="res://assets/player/The Female Adventurer - Free/Walk/walk.png" id="3_atpat"]
 [ext_resource type="Script" uid="uid://bfylcwknid43a" path="res://scripts/node_state_machine.gd" id="4_atpat"]
 [ext_resource type="Script" uid="uid://c5fo37pmg1xm4" path="res://scripts/idle.gd" id="5_kqtwu"]
 [ext_resource type="Script" uid="uid://8ow1rv7tfu06" path="res://scripts/walk.gd" id="6_kqtwu"]
+[ext_resource type="Script" uid="uid://bnwcnwey4syqd" path="res://scripts/chopping.gd" id="9_qgnko"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qop1"]
+atlas = ExtResource("2_eojnx")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i42og"]
+atlas = ExtResource("2_eojnx")
+region = Rect2(32, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kqtwu"]
 atlas = ExtResource("1_76oj4")
@@ -396,6 +406,17 @@ region = Rect2(336, 192, 48, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_0qop1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i42og")
+}],
+"loop": true,
+"name": &"chopping_down",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_kqtwu")
 }, {
 "duration": 1.0,
@@ -747,14 +768,14 @@ animations = [{
 radius = 5.09902
 
 [node name="player" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_6eyoc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_0qop1")
-animation = &"idle_up"
+animation = &"chopping_down"
 autoplay = "idle_down"
-frame_progress = 0.571151
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -6)
@@ -771,5 +792,10 @@ animation = NodePath("../../AnimatedSprite2D")
 
 [node name="walk" type="Node" parent="state_machine" node_paths=PackedStringArray("player", "animation")]
 script = ExtResource("6_kqtwu")
+player = NodePath("../..")
+animation = NodePath("../../AnimatedSprite2D")
+
+[node name="chopping" type="Node" parent="state_machine" node_paths=PackedStringArray("player", "animation")]
+script = ExtResource("9_qgnko")
 player = NodePath("../..")
 animation = NodePath("../../AnimatedSprite2D")
