@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://cbbfrjutghu55"]
+[gd_scene load_steps=4 format=4 uid="uid://cbbfrjutghu55"]
 
 [ext_resource type="TileSet" uid="uid://pq34bsyt8fo3" path="res://tilesets/game_tileset.tres" id="1_m5rfg"]
 [ext_resource type="PackedScene" uid="uid://cmpcw0k3ekq1g" path="res://scenes/characters/player.tscn" id="2_oc6w8"]
+[ext_resource type="PackedScene" uid="uid://e4w2n8vqj33g" path="res://scenes/summer_tree.tscn" id="3_d40ir"]
 
 [node name="test_tilemap" type="Node2D"]
 y_sort_enabled = true
@@ -26,7 +27,7 @@ tile_set = ExtResource("1_m5rfg")
 
 [node name="nature" type="TileMapLayer" parent="game_map"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAIAAMAAwAMAAAAAAAJAAkAAwAOAAAAAAAJAAQAAwABAAEAAAAKAAoAAwACAAEAAAAQAAQAAwADAAQAAAANAAMAAwACAAUAAAAOAAMAAwANAAQAAAATAAoAAwANAAYAAAAQAAkAAwACAAcAAAAQAAoAAwADAAQAAAARAAkAAwAEAAYAAAATAAkAAwABAAcAAAAMAAoAAwAEAAcAAAA=")
+tile_map_data = PackedByteArray("AAAJAAkAAwAOAAAAAAAJAAQAAwABAAEAAAAKAAoAAwACAAEAAAAQAAQAAwADAAQAAAANAAMAAwACAAUAAAAOAAMAAwANAAQAAAATAAoAAwANAAYAAAAQAAkAAwACAAcAAAAQAAoAAwADAAQAAAARAAkAAwAEAAYAAAATAAkAAwABAAcAAAAMAAoAAwAEAAcAAAA=")
 tile_set = ExtResource("1_m5rfg")
 
 [node name="animated_rock" type="TileMapLayer" parent="game_map"]
@@ -40,3 +41,6 @@ tile_set = ExtResource("1_m5rfg")
 [node name="animated_water_plant" type="TileMapLayer" parent="game_map"]
 tile_map_data = PackedByteArray("AAAGAAgACwAAAAAAAAAUAAYACwAAAAEAAAAEAAMACwAAAAIAAAA=")
 tile_set = ExtResource("1_m5rfg")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_d40ir")]
+position = Vector2(215, 80)

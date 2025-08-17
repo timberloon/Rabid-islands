@@ -18,10 +18,15 @@ func _on_next_transitions() -> void:
 
 
 func _on_enter() -> void:
-	animation.play("chopping_down")
+	if player.last_direction == Vector2.DOWN:
+		animation.play("chopping_down")
+	elif player.last_direction == Vector2.RIGHT:
+		animation.play("chopping_right")
+	elif player.last_direction == Vector2.LEFT:
+		animation.play("chopping_left")
 	player.chopping = true
 
 
 func _on_exit() -> void:
-	player.chopping = true
+	player.chopping = false
 	animation.stop()
