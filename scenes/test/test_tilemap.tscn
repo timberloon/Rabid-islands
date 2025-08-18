@@ -9,6 +9,7 @@ y_sort_enabled = true
 
 [node name="player" parent="." instance=ExtResource("2_oc6w8")]
 position = Vector2(180, 76)
+motion_mode = 0
 
 [node name="game_map" type="Node2D" parent="."]
 
@@ -27,7 +28,7 @@ tile_set = ExtResource("1_m5rfg")
 
 [node name="nature" type="TileMapLayer" parent="game_map"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAJAAkAAwAOAAAAAAAJAAQAAwABAAEAAAAKAAoAAwACAAEAAAAQAAQAAwADAAQAAAANAAMAAwACAAUAAAAOAAMAAwANAAQAAAATAAoAAwANAAYAAAAQAAkAAwACAAcAAAAQAAoAAwADAAQAAAARAAkAAwAEAAYAAAATAAkAAwABAAcAAAAMAAoAAwAEAAcAAAA=")
+tile_map_data = PackedByteArray("AAAJAAQAAwABAAEAAAAKAAoAAwACAAEAAAAQAAQAAwADAAQAAAANAAMAAwACAAUAAAAOAAMAAwANAAQAAAATAAoAAwANAAYAAAAQAAkAAwACAAcAAAAQAAoAAwADAAQAAAARAAkAAwAEAAYAAAATAAkAAwABAAcAAAAMAAoAAwAEAAcAAAA=")
 tile_set = ExtResource("1_m5rfg")
 
 [node name="animated_rock" type="TileMapLayer" parent="game_map"]
@@ -42,5 +43,8 @@ tile_set = ExtResource("1_m5rfg")
 tile_map_data = PackedByteArray("AAAGAAgACwAAAAAAAAAUAAYACwAAAAEAAAAEAAMACwAAAAIAAAA=")
 tile_set = ExtResource("1_m5rfg")
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_d40ir")]
-position = Vector2(215, 80)
+[node name="summer_tree" parent="." instance=ExtResource("3_d40ir")]
+position = Vector2(137, 78)
+
+[node name="summer_tree2" parent="." instance=ExtResource("3_d40ir")]
+position = Vector2(355, 161)
