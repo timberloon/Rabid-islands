@@ -1,9 +1,10 @@
-[gd_scene load_steps=116 format=3 uid="uid://cmpcw0k3ekq1g"]
+[gd_scene load_steps=117 format=3 uid="uid://cmpcw0k3ekq1g"]
 
 [ext_resource type="Script" uid="uid://cb7rpay8oyupb" path="res://scripts/player.gd" id="1_6eyoc"]
 [ext_resource type="Texture2D" uid="uid://7gjngl3jh5mv" path="res://assets/player/The Female Adventurer - Free/Death/death.png" id="1_76oj4"]
 [ext_resource type="Texture2D" uid="uid://iv4okxia7nuj" path="res://assets/player/The Female Adventurer - Free/Idle/Idle.png" id="2_dyp2m"]
 [ext_resource type="Texture2D" uid="uid://csnv48e0foh8k" path="res://assets/player/The Female Adventurer - Free/chopping/chopping_down.png" id="2_eojnx"]
+[ext_resource type="PackedScene" uid="uid://bgykrah5dhk13" path="res://scenes/inventory_ui.tscn" id="2_jk2m4"]
 [ext_resource type="Texture2D" uid="uid://cd6epyj6xfd25" path="res://assets/player/The Female Adventurer - Free/chopping/chopping_left.png" id="3_2l4js"]
 [ext_resource type="Texture2D" uid="uid://bcjsftc0vfgyg" path="res://assets/player/The Female Adventurer - Free/Walk/walk.png" id="3_atpat"]
 [ext_resource type="Script" uid="uid://bfylcwknid43a" path="res://scripts/node_state_machine.gd" id="4_atpat"]
@@ -840,3 +841,9 @@ animation = NodePath("../../AnimatedSprite2D")
 script = ExtResource("9_qgnko")
 player = NodePath("../..")
 animation = NodePath("../../AnimatedSprite2D")
+
+[node name="inventory_ui" parent="." instance=ExtResource("2_jk2m4")]
+offset_left = 4.0
+offset_top = -5.0
+offset_right = 164.0
+offset_bottom = 110.0

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="inv_item" load_steps=3 format=3 uid="uid://ws6n7elq8kps"]
+
+[ext_resource type="Script" uid="uid://c457nwabgvu7e" path="res://scripts/inventory_item.gd" id="1_emvyq"]
+[ext_resource type="Texture2D" uid="uid://xnllffdx7a6m" path="res://assets/items/log-export.png" id="2_emvyq"]
+
+[resource]
+script = ExtResource("1_emvyq")
+name = "log"
+texture = ExtResource("2_emvyq")
+metadata/_custom_type_script = "uid://c457nwabgvu7e"

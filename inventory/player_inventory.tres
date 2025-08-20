@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="inventory" load_steps=3 format=3 uid="uid://dokbhymib4m06"]
+
+[ext_resource type="Script" uid="uid://c457nwabgvu7e" path="res://scripts/inventory_item.gd" id="1_fhgtu"]
+[ext_resource type="Script" uid="uid://bvq77b3kupntk" path="res://scripts/inventory.gd" id="2_ptr4k"]
+
+[resource]
+script = ExtResource("2_ptr4k")
+items = Array[ExtResource("1_fhgtu")]([null, null, null, null, null, null, null, null, null, null, null, null])
+count = Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+metadata/_custom_type_script = "uid://bvq77b3kupntk"

@@ -21,10 +21,10 @@ func _physics_process(delta: float) -> void:
 		
 	if not chop_time.is_stopped():
 		if shake:
-			animation.material.set_shader_parameter("shake_intensity",2.0)
+			animation.material.set_shader_parameter("shake_intensity",0.0)
 			if shake_time.is_stopped():shake_time.start()
 		else:
-			animation.material.set_shader_parameter("shake_intensity",0.0)
+			animation.material.set_shader_parameter("shake_intensity",2.0)
 			if shake_time.is_stopped():shake_time.start()
 
 		

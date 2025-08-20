@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://cbbfrjutghu55"]
+[gd_scene load_steps=5 format=4 uid="uid://cbbfrjutghu55"]
 
 [ext_resource type="TileSet" uid="uid://pq34bsyt8fo3" path="res://tilesets/game_tileset.tres" id="1_m5rfg"]
 [ext_resource type="PackedScene" uid="uid://cmpcw0k3ekq1g" path="res://scenes/characters/player.tscn" id="2_oc6w8"]
 [ext_resource type="PackedScene" uid="uid://e4w2n8vqj33g" path="res://scenes/summer_tree.tscn" id="3_d40ir"]
+[ext_resource type="PackedScene" uid="uid://iqbvj1q6hmey" path="res://scenes/log.tscn" id="4_mgkq1"]
 
 [node name="test_tilemap" type="Node2D"]
 y_sort_enabled = true
@@ -48,3 +49,15 @@ position = Vector2(137, 78)
 
 [node name="summer_tree2" parent="." instance=ExtResource("3_d40ir")]
 position = Vector2(355, 161)
+
+[node name="log" parent="." instance=ExtResource("4_mgkq1")]
+position = Vector2(236, 81)
+
+[node name="log2" parent="." instance=ExtResource("4_mgkq1")]
+position = Vector2(217, 120)
+
+[node name="log3" parent="." instance=ExtResource("4_mgkq1")]
+position = Vector2(260, 137)
+
+[node name="log4" parent="." instance=ExtResource("4_mgkq1")]
+position = Vector2(313, 148)
