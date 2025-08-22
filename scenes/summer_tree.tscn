@@ -85,6 +85,7 @@ animation = &"standing"
 [node name="standing_collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
 shape = SubResource("CapsuleShape2D_jfnwn")
+debug_color = Color(0.866163, 0.00126257, 0.955238, 0.666667)
 
 [node name="chop_zone" type="Area2D" parent="."]
 

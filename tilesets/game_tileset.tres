@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://pq34bsyt8fo3"]
+[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://pq34bsyt8fo3"]
 
 [ext_resource type="Texture2D" uid="uid://cmmfxt2hehckk" path="res://assets/Home_island/Water/water - fall.png" id="1_ljy4i"]
 [ext_resource type="Texture2D" uid="uid://dwqe65xrpdhdu" path="res://assets/Home_island/floor/ground/sand.png" id="2_y2rbu"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://g7wv6mpk27bc" path="res://assets/Home_island/nature/animated/water plant 1.png" id="4_ifn7o"]
 [ext_resource type="Texture2D" uid="uid://dn70a8auvlfod" path="res://assets/Home_island/nature/animated/rock 1.png" id="5_vgim2"]
 [ext_resource type="Texture2D" uid="uid://cyrr321r25kbb" path="res://assets/Home_island/nature/nature_sheet.png" id="6_ifn7o"]
+[ext_resource type="PackedScene" uid="uid://e4w2n8vqj33g" path="res://scenes/summer_tree.tscn" id="7_5vpay"]
+[ext_resource type="PackedScene" uid="uid://co35ehmalrkrs" path="res://scenes/breakable_rock.tscn" id="8_pxial"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2rbu"]
 texture = ExtResource("1_ljy4i")
@@ -523,6 +525,14 @@ texture = ExtResource("6_ifn7o")
 2:7/0 = 0
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.95689, -3.86696, 10.2519, 0.449646, 13.1297, 12.68, -10.7915, 12.1405, -10.4318, 2.78781)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_pxial"]
+resource_name = "trees"
+scenes/1/scene = ExtResource("7_5vpay")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mmau8"]
+resource_name = "Rocks"
+scenes/1/scene = ExtResource("8_pxial")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vlai"]
 texture = ExtResource("5_vgim2")
 0:0/size_in_atlas = Vector2i(2, 2)
@@ -572,3 +582,5 @@ sources/9 = SubResource("TileSetAtlasSource_1vlai")
 sources/10 = SubResource("TileSetAtlasSource_ifn7o")
 sources/11 = SubResource("TileSetAtlasSource_5vpay")
 sources/3 = SubResource("TileSetAtlasSource_pxial")
+sources/4 = SubResource("TileSetScenesCollectionSource_pxial")
+sources/5 = SubResource("TileSetScenesCollectionSource_mmau8")

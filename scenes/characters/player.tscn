@@ -815,9 +815,9 @@ script = ExtResource("1_6eyoc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_0qop1")
-animation = &"idle_down"
+animation = &"chopping_right"
 autoplay = "idle_down"
-frame_progress = 0.277961
+frame_progress = 0.755423
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -6)
@@ -843,7 +843,8 @@ player = NodePath("../..")
 animation = NodePath("../../AnimatedSprite2D")
 
 [node name="inventory_ui" parent="." instance=ExtResource("2_jk2m4")]
-offset_left = 4.0
-offset_top = -5.0
-offset_right = 164.0
-offset_bottom = 110.0
+visible = false
+offset_left = 5.0
+offset_top = -9.0
+offset_right = 146.0
+offset_bottom = 97.0

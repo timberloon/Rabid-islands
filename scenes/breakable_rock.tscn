@@ -1,0 +1,146 @@
+[gd_scene load_steps=18 format=3 uid="uid://co35ehmalrkrs"]
+
+[ext_resource type="Script" uid="uid://dntp43q4t2o30" path="res://scripts/breakable_rock.gd" id="1_7f0rj"]
+[ext_resource type="Texture2D" uid="uid://dkx0ybm8dildh" path="res://assets/Home_island/nature/rock_breaking.png" id="1_ydy01"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbxn3"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4e4l"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmsr8"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nveue"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ug4h"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f0rj"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22frv"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_art48"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypt1c"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hws4d"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny7tf"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkulq"]
+atlas = ExtResource("1_ydy01")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hws4d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbxn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4e4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmsr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nveue")
+}],
+"loop": false,
+"name": &"breaking",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ug4h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f0rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22frv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_art48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypt1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hws4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ny7tf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkulq")
+}],
+"loop": true,
+"name": &"intmd",
+"speed": 3.5
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sbxn3"]
+radius = 9.0
+height = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4e4l"]
+size = Vector2(38, 26)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_7f0rj")
+
+[node name="animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_hws4d")
+animation = &"intmd"
+autoplay = "idle"
+
+[node name="standing_collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_sbxn3")
+debug_color = Color(0.621997, 0.00293867, 0.894759, 0.42)
+
+[node name="chop_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chop_zone"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_h4e4l")
+
+[node name="chop_time" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="wait_time" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="chop_zone" to="." method="_on_chop_zone_body_entered"]
+[connection signal="body_exited" from="chop_zone" to="." method="_on_chop_zone_body_exited"]
+[connection signal="timeout" from="chop_time" to="." method="_on_chop_time_timeout"]
+[connection signal="timeout" from="wait_time" to="." method="_on_wait_time_timeout"]
