@@ -19,7 +19,6 @@ func _ready() -> void:
 
 
 func _process(delta : float) -> void:
-	if current_node_state:
 		current_node_state._on_process(delta)
 
 

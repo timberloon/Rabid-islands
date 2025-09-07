@@ -68,7 +68,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"breaking",
-"speed": 4.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -113,12 +113,13 @@ height = 24.0
 size = Vector2(38, 26)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_7f0rj")
 
 [node name="animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_hws4d")
-animation = &"intmd"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="standing_collision" type="CollisionShape2D" parent="."]

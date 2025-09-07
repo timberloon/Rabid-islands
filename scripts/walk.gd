@@ -11,6 +11,8 @@ func _on_process(_delta : float) -> void:
 func _on_physics_process(_delta : float) -> void:
 	direction = input_event.movement_input()
 	
+	if not Manager.take_inputs:
+		direction = Vector2.ZERO
 	if direction == Vector2.RIGHT:
 		animation.play("walk_right")
 	elif direction == Vector2.LEFT:
@@ -20,12 +22,12 @@ func _on_physics_process(_delta : float) -> void:
 	elif direction == Vector2.DOWN:
 		animation.play("walk_down")
 	
-	if direction != Vector2.ZERO: player.last_direction = direction
+	if direction != Vector2.ZERO: Manager.last_direction = direction
 	player.velocity = direction*speed
 	player.move_and_slide()
 
 func _on_next_transitions() -> void:
-	if !input_event.is_movement_input():
+	if !input_event.is_movement_input() or not Manager.take_inputs:
 		transition.emit("idle")
 
 

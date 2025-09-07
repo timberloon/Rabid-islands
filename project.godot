@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Rabid_islands"
-run/main_scene="uid://cbbfrjutghu55"
+run/main_scene="uid://bxs06rph6hqxj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Manager="*res://scenes/manager.tscn"
+Transition="*res://scenes/canvas/scene_transition.tscn"
 
 [display]
 
@@ -65,4 +66,5 @@ inventory={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true

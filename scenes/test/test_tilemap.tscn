@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=4 uid="uid://cbbfrjutghu55"]
+[gd_scene load_steps=6 format=4 uid="uid://cbbfrjutghu55"]
 
 [ext_resource type="TileSet" uid="uid://pq34bsyt8fo3" path="res://tilesets/game_tileset.tres" id="1_m5rfg"]
+[ext_resource type="Script" uid="uid://dhn5etei67u7r" path="res://scripts/test/test_tilemap.gd" id="1_x8ybn"]
 [ext_resource type="PackedScene" uid="uid://cmpcw0k3ekq1g" path="res://scenes/characters/player.tscn" id="2_oc6w8"]
 [ext_resource type="PackedScene" uid="uid://e4w2n8vqj33g" path="res://scenes/summer_tree.tscn" id="3_d40ir"]
+[ext_resource type="PackedScene" uid="uid://b06f5kif08cqo" path="res://scenes/player_house.tscn" id="4_mgkq1"]
 
 [node name="test_tilemap" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_x8ybn")
 
 [node name="player" parent="." instance=ExtResource("2_oc6w8")]
 position = Vector2(180, 76)
@@ -48,3 +51,6 @@ position = Vector2(137, 78)
 
 [node name="summer_tree2" parent="." instance=ExtResource("3_d40ir")]
 position = Vector2(355, 161)
+
+[node name="player_house" parent="." instance=ExtResource("4_mgkq1")]
+position = Vector2(74, 167)

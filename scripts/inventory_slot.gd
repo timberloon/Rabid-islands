@@ -11,4 +11,8 @@ func update(curr_item:inv_item)->void:
 		item.texture = curr_item.texture
 
 func item_text(txt:int):
-	label.text = str(txt+1)
+	label.text = str(txt)
+
+
+func _on_button_pressed() -> void:
+	print("button pressed")

@@ -8,13 +8,13 @@ func _on_process(_delta : float) -> void:
 
 
 func _on_physics_process(_delta : float) -> void:
-	if player.last_direction == Vector2.UP:
+	if Manager.last_direction == Vector2.UP:
 		animation.play("idle_up")
-	elif player.last_direction == Vector2.DOWN:
+	elif Manager.last_direction == Vector2.DOWN:
 		animation.play("idle_down")
-	elif player.last_direction == Vector2.LEFT:
+	elif Manager.last_direction == Vector2.LEFT:
 		animation.play("idle_left")
-	elif player.last_direction == Vector2.RIGHT:
+	elif Manager.last_direction == Vector2.RIGHT:
 		animation.play("idle_right")
 	else:
 		animation.play("idle_down")

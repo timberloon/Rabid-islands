@@ -809,18 +809,18 @@ animations = [{
 radius = 5.09902
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 motion_mode = 1
 script = ExtResource("1_6eyoc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_0qop1")
-animation = &"chopping_right"
+animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.755423
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -6)
+position = Vector2(1, -5)
 shape = SubResource("CircleShape2D_76oj4")
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]

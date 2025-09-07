@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://b06f5kif08cqo"]
+
+[ext_resource type="Script" uid="uid://dlnjsc18q6keg" path="res://scripts/home_ext.gd" id="1_j6pox"]
+[ext_resource type="Texture2D" uid="uid://dw6qfqce6ahjo" path="res://assets/Home_island/house/house3.png" id="2_j6pox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p6c8"]
+size = Vector2(30, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j121a"]
+size = Vector2(21, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6pox"]
+size = Vector2(2, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6268"]
+radius = 5.0
+
+[node name="player_house" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_j6pox")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -44)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_j6pox")
+
+[node name="colliders" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colliders"]
+position = Vector2(-10, -27.5)
+shape = SubResource("RectangleShape2D_7p6c8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="colliders"]
+position = Vector2(15.5, -35)
+shape = SubResource("RectangleShape2D_j121a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="colliders"]
+position = Vector2(25, -18)
+shape = SubResource("RectangleShape2D_j6pox")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(15, -18)
+shape = SubResource("CircleShape2D_t6268")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -31,9 +31,9 @@ region = Rect2(144, 0, 48, 48)
 atlas = ExtResource("2_hl3b0")
 region = Rect2(192, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f2lv5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_eiyxe"]
 atlas = ExtResource("3_c6cpm")
-region = Rect2(0, 0, 58, 40)
+region = Rect2(0, 0, 58, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5fs63"]
 animations = [{
@@ -59,7 +59,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f2lv5")
+"texture": SubResource("AtlasTexture_eiyxe")
 }],
 "loop": true,
 "name": &"standing",
@@ -71,16 +71,17 @@ radius = 6.0
 height = 18.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kww3w"]
-size = Vector2(30, 22)
+size = Vector2(30, 19)
 
 [node name="summer_tree" type="StaticBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_eiyxe")
 
 [node name="animation" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_hl3b0")
 position = Vector2(-12, -20)
 sprite_frames = SubResource("SpriteFrames_5fs63")
-animation = &"standing"
+animation = &"fall"
 
 [node name="standing_collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
@@ -90,7 +91,7 @@ debug_color = Color(0.866163, 0.00126257, 0.955238, 0.666667)
 [node name="chop_zone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chop_zone"]
-position = Vector2(-1, -11)
+position = Vector2(-1, -12.5)
 shape = SubResource("RectangleShape2D_kww3w")
 
 [node name="chop_time" type="Timer" parent="."]

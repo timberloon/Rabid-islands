@@ -18,11 +18,11 @@ func _on_next_transitions() -> void:
 
 
 func _on_enter() -> void:
-	if player.last_direction == Vector2.DOWN:
+	if Manager.last_direction == Vector2.DOWN:
 		animation.play("chopping_down")
-	elif player.last_direction == Vector2.RIGHT:
+	elif Manager.last_direction == Vector2.RIGHT:
 		animation.play("chopping_right")
-	elif player.last_direction == Vector2.LEFT:
+	elif Manager.last_direction == Vector2.LEFT:
 		animation.play("chopping_left")
 	player.chopping = true
 
